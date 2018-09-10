@@ -1,0 +1,161 @@
+[
+  "Program_LineBreak_CompleteCommands_LineBreak",
+  [ "LineBreak_Empty" ],
+  [
+    "CompleteCommands_CompleteCommands_NewlineList_CompleteCommand",
+    [
+      "CompleteCommands_CompleteCommands_NewlineList_CompleteCommand",
+      [
+        "CompleteCommands_CompleteCommands_NewlineList_CompleteCommand",
+        [
+          "CompleteCommands_CompleteCommand",
+          [
+            "CompleteCommand_CList",
+            [
+              "CList_AndOr",
+              [
+                "AndOr_Pipeline",
+                [
+                  "Pipeline_PipeSequence",
+                  [
+                    "PipeSequence_Command",
+                    [
+                      "Command_SimpleCommand",
+                      [
+                        "SimpleCommand_CmdName_CmdSuffix",
+                        [
+                          "CmdName_Word",
+                          [ "Word", "alias", [ [ "WordName", "alias" ] ] ]
+                        ],
+                        [
+                          "CmdSuffix_Word",
+                          [
+                            "Word",
+                            "x=\"true \"",
+                            [
+                              [
+                                "WordAssignmentWord",
+                                [
+                                  [ "Name", "x" ],
+                                  [
+                                    "Word",
+                                    "\"true \"",
+                                    [
+                                      [
+                                        "WordDoubleQuoted",
+                                        [
+                                          "Word",
+                                          "true ",
+                                          [ [ "WordLiteral", "true " ] ]
+                                        ]
+                                      ]
+                                    ]
+                                  ]
+                                ]
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        [ "NewLineList_NewLine" ],
+        [
+          "CompleteCommand_CList",
+          [
+            "CList_AndOr",
+            [
+              "AndOr_Pipeline",
+              [
+                "Pipeline_PipeSequence",
+                [
+                  "PipeSequence_Command",
+                  [
+                    "Command_SimpleCommand",
+                    [
+                      "SimpleCommand_CmdName",
+                      [
+                        "CmdName_Word",
+                        [ "Word", "\"true \"", [ [ "WordLiteral", "x" ] ] ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      [ "NewLineList_NewLine" ],
+      [
+        "CompleteCommand_CList",
+        [
+          "CList_AndOr",
+          [
+            "AndOr_Pipeline",
+            [
+              "Pipeline_PipeSequence",
+              [
+                "PipeSequence_Command",
+                [
+                  "Command_SimpleCommand",
+                  [
+                    "SimpleCommand_CmdName_CmdSuffix",
+                    [
+                      "CmdName_Word",
+                      [ "Word", "\"true \"", [ [ "WordLiteral", "x" ] ] ]
+                    ],
+                    [
+                      "CmdSuffix_Word",
+                      [ "Word", "\"true \"", [ [ "WordLiteral", "x" ] ] ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    [ "NewLineList_NewLine" ],
+    [
+      "CompleteCommand_CList",
+      [
+        "CList_AndOr",
+        [
+          "AndOr_Pipeline",
+          [
+            "Pipeline_PipeSequence",
+            [
+              "PipeSequence_Command",
+              [
+                "Command_SimpleCommand",
+                [
+                  "SimpleCommand_CmdName_CmdSuffix",
+                  [
+                    "CmdName_Word",
+                    [ "Word", "\"true \"", [ [ "WordLiteral", "x" ] ] ]
+                  ],
+                  [
+                    "CmdSuffix_CmdSuffix_Word",
+                    [
+                      "CmdSuffix_Word",
+                      [ "Word", "\"true \"", [ [ "WordLiteral", "x" ] ] ]
+                    ],
+                    [ "Word", "\" true \"", [ [ "WordName", "x" ] ] ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ],
+  [ "LineBreak_Empty" ]
+]
