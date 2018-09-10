@@ -205,19 +205,10 @@ let inside_a_substitution_combo = function
   | CommandNameSubstituted | NextWordSubstituted -> true
   | _ -> false
 
-let quoted word =
-  let len = String.length word in
-  len >= 2 && word.[0] = '\'' && word.[len - 1] = '\''
-
-let unquote word =
-  String.(sub word 1 (length word - 2))
-
 let rec end_of_with_whitespace word =
-  if quoted word then
-    end_of_with_whitespace (unquote word)
-  else
-    let len = String.length word - 1 in
-    len >= 1 && word.[String.length word - 1] = ' '
+  let unquoted_word = QuoteRemoval.on_string word
+  in let len = String.length unquoted_word
+     in len >= 1 && unquoted_word.[len - 1] = ' '
 
 let only_if_end_with_whitespace word aliases state =
   if end_of_with_whitespace word then (
