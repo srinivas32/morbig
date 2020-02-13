@@ -16,12 +16,13 @@
  (libraries str menhirLib ppx_deriving_yojson.runtime visitors.runtime)
  (preprocess (pps ppx_deriving_yojson visitors.ppx))
  (flags :standard -w -3) ; FIXME: remove this when Yojson and its PPX are fixed.
+ (ocamlopt_flags :standard -flarge-toc)
  (modules :standard \ morbigDriver))
 
 (executable
  (name morbigDriver)
  (public_name morbig)
- (ocamlopt_flags :standard)
+ (ocamlopt_flags :standard -flarge-toc)
  (libraries morbig)
  (preprocess (pps ppx_deriving_yojson visitors.ppx)) ;; Avoid warning about incomplete merlin files.
  (modules morbigDriver))
