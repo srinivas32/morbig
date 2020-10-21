@@ -11,6 +11,7 @@ script:
 matrix:
   include:
     - os: osx
+      osx_image: xcode12
       services: null
       install:
         - brew install opam
