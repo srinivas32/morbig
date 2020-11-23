@@ -31,6 +31,28 @@ matrix:
     - env: TAG=opensuse
     - env: TAG=ubuntu
     - env: TAG=ubuntu-lts
+    # added power support arch ppc64le 
+    - os: osx
+      services: null
+      install:
+        - brew install opam
+        - opam init --no-setup
+        - eval $(opam config env) && opam install --yes menhir yojson ppx_deriving_yojson visitors
+      script:
+        - make && make check && make install && make examples && make uninstall
+    - env: TAG=4.04
+    - env: TAG=4.05
+    - env: TAG=4.06 DEPLOY=true
+    - env: TAG=4.07
+    - env: TAG=4.08
+    - env: TAG=alpine
+    - env: TAG=centos
+    - env: TAG=debian-stable
+    - env: TAG=debian-testing
+    - env: TAG=debian-unstable
+    - env: TAG=opensuse
+    - env: TAG=ubuntu
+    - env: TAG=ubuntu-lts
 
 ## We automatically deploy sucessfull branch builds to DockerHub. This
 ## deployment only happens on builds that have the environment
